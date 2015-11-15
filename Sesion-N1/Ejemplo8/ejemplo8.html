@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo 8</title>
+	<meta name="autor" content="Gerson Perez  Aguilar - UI/UX Designer and Front-end Developer | gersonperez.com">
+	<style>
+		nav {
+		  display: -webkit-box;
+		  display: -moz-box;
+		  display: -webkit-flex;
+		  display: -ms-flexbox;
+		  display: box;
+		  display: flex;
+		  -webkit-box-pack: distribute;
+		  -moz-box-pack: distribute;
+		  -o-box-pack: distribute;
+		  -ms-flex-pack: distribute;
+		  -webkit-justify-content: space-around;
+		  justify-content: space-around;
+		}
+		p{
+			font-size: 23px;
+			text-align: justify;
+		}
+		
+		.estilos{
+			cursor:pointer;
+			font-size: 25px;
+			padding: 7px 15px;
+		}
+
+	</style>	
+</head>
+<body>
+	<nav>
+		<button id="btn1">Facebook</button>
+		<button id="btn2">Twitter</button>
+		<button id="btn3">Linkedln</button>
+		<button id="btn4">Youtube</button>
+	</nav>
+	<!--Aquí se almacenara la lista de item -->
+	<div id="listado">
+		
+	</div>	
+	<script>
+
+		var btn1 = document.getElementById('btn1');
+		var btn2 = document.getElementById('btn2');
+		var btn3 = document.getElementById('btn3');
+		var btn4 = document.getElementById('btn4');
+		var lista = document.getElementById('listado');
+
+
+
+		var item1 = document.createElement('p');
+		item1.innerHTML = "Facebook es un sitio web de redes sociales creado por Mark Zuckerberg y fundado junto a Eduardo Saverin, Chris Hughes y Dustin Moskovitz. Originalmente era un sitio para estudiantes de la Universidad de Harvard.";
+
+		var item2 = document.createElement('p');
+		item2.innerHTML = "Twitter es un servicio de microblogging, con sede en San Francisco, California, con filiales en San Antonio y Boston en Estados Unidos. Twitter, Inc. fue creado originalmente en California, pero está bajo la jurisdicción de Delaware desde 2007.";
+
+		var item3 = document.createElement('p');
+		item3.innerHTML = "LinkedIn es un sitio web orientado a negocios. Fue fundado en diciembre de 2002 y lanzado en mayo de 2003, principalmente para red profesional. Fue fundada por Reid Hoffman, Allen Blue, Konstantin Guericke, Eric Ly y Jean-Luc Vaillant.";
+
+		var item4 = document.createElement('p');
+		item4.innerHTML = "YouTube es un sitio web en el cual los usuarios pueden subir y compartir vídeos. Aloja una variedad de clips de películas, programas de televisión y vídeos musicales, así como contenidos amateur como videoblogs.";
+
+		//Instanciamos la clase estilos
+		btn1.classList.add('estilos');
+		btn2.classList.add('estilos');
+		btn3.classList.add('estilos');
+		btn4.classList.add('estilos');
+		
+		//Con las funciones estamos agregando y removiendo elementos
+		function activar1(){
+			listado.appendChild(item1);
+			item2.remove();
+			item3.remove();
+			item4.remove();
+		}
+
+		function activar2(){
+			listado.appendChild(item2);
+			item1.remove();
+			item3.remove();
+			item4.remove();
+		}
+
+		function activar3(){
+			listado.appendChild(item3);
+			item1.remove();
+			item2.remove();
+			item4.remove();
+		}
+		function activar4(){
+			listado.appendChild(item4);
+			item1.remove();
+			item2.remove();
+			item3.remove();			
+		}
+
+
+		//Llamamos a la funcion cuando se haga click en uno de los botones
+		btn1.addEventListener("click",function(){			
+			activar1();
+			setTimeout('alert("Facebook!");', 1700);
+		});
+
+		btn2.addEventListener("click",function(){
+			activar2();
+			setTimeout('alert("Twitter!");', 1700);
+		});
+
+		btn3.addEventListener("click",function(){
+			activar3();
+			setTimeout('alert("Linkedln!");', 1700);
+		});
+		btn4.addEventListener("click",function(){
+			activar4();
+			setTimeout('alert("Youtube!");', 1700);
+		});
+
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo 7</title>
+	<meta name="autor" content="Gerson Perez  Aguilar - UI/UX Designer and Front-end Developer | gersonperez.com">
+</head>
+<body>	
+	<button id="btn">Enviar Mensaje</button>
+	<script>
+		var btn = document.getElementById('btn');
+		//Creamos la función hola()
+		function hola(){
+			//seTimeOut: Nos permite realizar un evento dentro un tiempo determinado.
+			setTimeout("alert('HOLAAA');", 2000);
+		}
+		//addEventListerner: método concede un controlador de eventos para el documento.
+		btn.addEventListener("click",function(){
+			hola();
+		});
+
+	</script>
+
+</body>
+</html>

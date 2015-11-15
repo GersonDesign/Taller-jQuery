@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Ejemplo 5</title>
+		<meta name="autor" content="Gerson Perez  Aguilar - UI/UX Designer and Front-end Developer | gersonperez.com">
+	</head>
+	<body>
+		<script>
+			var parafo ="Seguimos aprendiendo JS";
+
+			var etiquetaP = document.createElement("p");
+			
+			//InnerHTML Es una propiedad que te devuelve el contenido HTML (HTML interna ) de un elemento .
+			etiquetaP.innerHTML = parafo;
+			console.log(etiquetaP);
+
+			//Appenchild: Añade un elemento hijo.
+			//Se esta agregando la variable etiquetaP a la etiqueta Body
+			document.body.appendChild(etiquetaP);
+		</script>
+	</body>
+</html>

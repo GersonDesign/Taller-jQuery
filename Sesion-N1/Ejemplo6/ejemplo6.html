@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejemplo 6</title>
+	<meta name="autor" content="Gerson Perez  Aguilar - UI/UX Designer and Front-end Developer | gersonperez.com">
+	<style>
+		nav {
+		  display: -webkit-box;
+		  display: -moz-box;
+		  display: -webkit-flex;
+		  display: -ms-flexbox;
+		  display: box;
+		  display: flex;
+		  -webkit-box-pack: distribute;
+		  -moz-box-pack: distribute;
+		  -o-box-pack: distribute;
+		  -ms-flex-pack: distribute;
+		  -webkit-justify-content: space-around;
+		  justify-content: space-around;
+		}
+		.bold{
+			font-weight: bold;
+		}
+		.sizeLetra{
+			font-size: 30px;
+		}
+		.pasarMouse{
+			text-decoration: none;
+		}
+		.pasarMouse:hover{
+			text-decoration: underline;
+		}
+
+	</style>
+</head>
+<body>	
+	<nav id="Menu"></nav>
+	<script>
+		var menu 	= document.getElementById('Menu');
+
+		//createElement: Nos permite crear etiquetas html
+		var option1	= document.createElement('a');	
+		option1.innerHTML = 'HTML5';
+		var option2	= document.createElement('a');
+		option2.innerHTML = 'CSS3';
+		var option3	= document.createElement('a');
+		option3.innerHTML = 'JAVASCRIPT';
+		var option4	= document.createElement('a');
+		option4.innerHTML = 'JQUERY';
+
+		//style.color: Nos permite agregar colores a las etiquetas HTML
+		option1.style.color ="#011826";
+		option2.style.color ="#023859";
+		option3.style.color ="#03658C";
+		option4.style.color ="#049DBF";
+
+		//classList.add: Nos permite agregar una o varias clases
+		option1.classList.add('bold', 'sizeLetra', 'pasarMouse');
+		option2.classList.add('bold', 'sizeLetra', 'pasarMouse');
+		option3.classList.add('bold', 'sizeLetra', 'pasarMouse');
+		option4.classList.add('bold', 'sizeLetra', 'pasarMouse');
+
+		//href: Nos permite vincular a una pagina web o una sesión
+		option1.href= "http://html5demos.com";
+		option2.href= "http://cssdeck.com";
+		option3.href= "https://developer.mozilla.org/en-US/demos/tag/tech%3Ajavascript";
+		option4.href= "https://jquery.com";
+
+
+		//Estamos agregando la etiqueta "a" a la etiqueta "nav"
+		menu.appendChild(option1);
+		menu.appendChild(option2);
+		menu.appendChild(option3);
+		menu.appendChild(option4);
+
+	</script>
+
+</body>
+</html>
